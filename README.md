@@ -162,7 +162,7 @@ def test_add_new_pet_increases_pet_count():
     initial_count = len(initial_result['pets'])  # Сохраняем текущее количество питомцев
 
     # Добавляем нового питомца
-    pet_photo = 'images/cat1.jpg'  # Путь к фото может быть действительным
+    pet_photo = 'images/cat1.jpg' 
     pf.add_new_pet(auth_key, 'Бобик', 'собака', '4', pet_photo)
 
     # Получаем количество питомцев после добавления
@@ -191,7 +191,7 @@ def test_add_new_pet_with_long_name():
 
     # Создание имени превышающего допустимую длину (предположим что есть требования и ограничение 256 символов)
     long_name = 'Л' * 256
-    pet_photo = 'images/cat1.jpg'  # Путь к фото может быть действительным
+    pet_photo = 'images/cat1.jpg'
 
     # Пытаемся добавить питомца с длинным именем
     status, result = pf.add_new_pet(auth_key, long_name, 'собака', '5', pet_photo)
